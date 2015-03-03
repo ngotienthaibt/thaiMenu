@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>temlet demo</title>
+	<link rel="stylesheet" href="sMenu.css">
+	<script src="..//js/jquery-v1.11.2.js"></script>
+	<script src="sMenu.jquery.js"></script>
+</head>
+<body>
+
+	<!-- <nav id="thaiMenu" class="float-style canvas-off">
+		<button class="menu-control">
+			<span class="button-text">Menu</span>
+			<span class="button-icon"></span>
+		</button>
+		<div class="inner-menu">
+			<button class="menu-close">
+				<span class="close-text">Close</span>
+				<span class="close-icon"></span>
+			</button>
+			<ul class="first-level">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Feature</a></li>
+				<li><a href="#">Example</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Feature</a></li>
+				<li><a href="#">Example</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Feature</a></li>
+				<li><a href="#">Example</a></li>
+			</ul>
+		</div>
+	</nav>
+ -->
+ <nav id="main-menu">
+ 	<ul class="first-level">
+				<li>
+					
+					<ul class="second-level">
+						<li>
+							
+							<ul class="third-level">
+								<li><a href="google.com">level three 1</a></li>
+								<li><a href="#">level three 2</a></li>
+								<li><a href="#">level three 3</a></li>
+								<li><a href="#">level three 4</a></li>
+								<li><a href="#">level three 5</a></li>
+							</ul>
+							<a href="#">example 1</a>
+
+						</li>
+						<li><a href="#">example 2</a></li>
+						<li>
+							
+							<ul class="third-level">
+								<li><a href="#">level three 1</a></li>
+								<li><a href="#">level three 2</a></li>
+								<li><a href="#">level three 3</a></li>
+								<li><a href="#">level three 4</a></li>
+								<li><a href="#">level three 5</a></li>
+							</ul>
+							<a href="#">example 3</a>
+
+						</li>
+						<li><a href="#">example 4</a></li>
+						<li><a href="#">example 5</a></li>
+					</ul>
+					<a href="http://facebook.com">Home</a>
+
+				</li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li>
+					
+					<ul class="second-level">
+						<li>
+							<ul class="third-level">
+								<li><a href="#">level three 1</a></li>
+								<li><a href="#">level three 2</a></li>
+								<li><a href="#">level three 3</a></li>
+								<li><a href="#">level three 4</a></li>
+								<li><a href="#">level three 5</a></li>
+							</ul>
+							<a href="#">example 1</a>
+						</li>
+						<li><a href="#">example 2</a></li>
+						<li>
+							
+							<ul class="third-level">
+								<li><a href="#">level three 1</a></li>
+								<li><a href="#">level three 2</a></li>
+								<li><a href="#">level three 3</a></li>
+								<li><a href="#">level three 4</a></li>
+								<li><a href="#">level three 5</a></li>
+							</ul>
+							<a href="#">example 3</a>
+						</li>
+						<li><a href="#">example 4</a></li>
+						<li><a href="#">example 5</a></li>
+					</ul>
+					<a href="#">Feature</a>
+				</li>
+				<li><a href="#">Example</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li>
+					
+					<ul class="second-level">
+						<li><a href="#">example 1</a></li>
+						<li><a href="#">example 2</a></li>
+						<li><a href="#">example 3</a></li>
+						<li><a href="#">example 4</a></li>
+						<li><a href="#">example 5</a></li>
+					</ul>
+					<a href="#">Contact</a>
+
+				</li>
+				
+	</ul>
+ </nav>
+
+	<script>
+	
+	$('#main-menu').sMenu();
+
+	// $('#main-menu').find('ul.second-level,ul.third-level').addClass('get-up');
+	
+	// function togggleSubMenu(suMenu){
+	// 	$('#main-menu').find(suMenu).siblings('a').click(function(e){
+	//   		e.preventDefault();
+	//   		$(this).siblings(suMenu).slideToggle(500).toggleClass('get-down').toggleClass('get-up');
+
+	//   });
+	// }
+	// togggleSubMenu('ul.second-level');
+	// togggleSubMenu('ul.third-level');
+	</script>
+</body>
+
+</html>

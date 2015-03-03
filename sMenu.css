@@ -1,0 +1,444 @@
+/*menu style vension 1.0*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+#thaiMenu {
+  width: 100%;
+  z-index: 9999;
+ 
+  
+}
+#thaiMenu .button-text {
+  font-size: 20px;
+}
+#thaiMenu a {
+  text-decoration: none;
+}
+#thaiMenu button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#thaiMenu ul {
+  list-style: none;
+}
+
+@media all and (min-width: 481px) {
+  /*toggle-menu*/
+  #thaiMenu.toggle-menu ul.second-level ~ a:before {
+  right: 20px !important;
+  
+}
+  #thaiMenu.toggle-menu ul.third-level ~ a:before {
+  border-top: 7px solid black !important;
+  border-left: 7px solid transparent !important;
+  border-right: 7px solid transparent;
+}
+  #thaiMenu.toggle-menu button.menu-control {
+    position: relative;
+    display: block !important;
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    font-size: 1.5em;
+    background: #212B41;
+    left: 0px !important;
+  }
+  #thaiMenu.toggle-menu button.menu-close {
+    display: block !important;
+     width: 100%;
+    height: 50px;
+    color: #fff;
+    font-size: 1.5em;
+    background: #212B41;
+  }
+  
+  #thaiMenu.toggle-menu div.inner-menu {
+    position: fixed; top: 0px; left: -100%;
+    min-width: 400px;
+     transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+   #thaiMenu.toggle-menu div.inner-menu.appear {
+     left: 0%;
+   }
+   #thaiMenu.toggle-menu button.menu-control.disappear {
+     left: 100%;
+   }
+  #thaiMenu.toggle-menu .inner-menu ul.first-level {
+    display: block;
+  }
+  #thaiMenu.toggle-menu .inner-menu ul.first-level>li {
+    float: none;
+    display: block;
+    
+  }
+  #thaiMenu.toggle-menu .inner-menu ul.first-level>li>a {
+     display: block;
+     padding: 10px 10px 10px 35px; 
+     background: #212B41;color: #fff;
+     font-size: 1em;
+     box-sizing: border-box;
+     border-top: 2px solid #192132;
+    float: left;
+   width: 100%;
+     
+   }
+    #thaiMenu.toggle-menu .second-level {
+      position : relative !important;
+      float: left;
+      width: 100%;
+      padding: 0px!important;
+      
+     
+    }
+  #thaiMenu.toggle-menu .second-level>li {
+    
+    clear: both;
+  }
+    #thaiMenu.toggle-menu .second-level>li>a {
+   width: 100%;
+      border-bottom: 1px solid #192132;
+      background: #212B41;
+      
+      padding-left: 50px !important;
+  } 
+  #thaiMenu.toggle-menu .third-level {
+      position : relative !important;
+    position: relative; left: 0px !important;
+    float: left;
+    min-width: 100% !important;
+     padding: 0px!important;
+    
+    
+   
+   
+    }
+  #thaiMenu.toggle-menu .third-level li {
+    clear: both;width: 100%;
+    
+  }
+   #thaiMenu.toggle-menu .third-level li>a {
+    clear: both;width: 100%;
+     border-bottom: 1px solid #192132;
+      background: #212B41;
+      
+      padding-left: 60px !important;
+  }
+  /*select-box*/
+  .wrapper-sb {
+    display: none;
+  }
+  
+  /*float-style*/
+ #thaiMenu {
+   overflow: visible;
+ }
+  #thaiMenu button.menu-control {
+    display: none;
+  }
+  #thaiMenu button.menu-close {
+    display: none;
+  }
+  #thaiMenu .inner-menu {
+    display: block;
+  }
+ 
+  /*multiple level*/
+  #thaiMenu .inner-menu ul.first-level>li {
+    position: relative;
+    
+  }
+  ul.second-level ~ a,ul.third-level ~ a {
+    position: relative;
+     display: inline-block;
+   width: 100%;
+   
+  }
+ ul.second-level ~ a:before {
+  
+   content: "";
+   position: absolute; right: 0px; top: 50%;
+   transform: translateY(-50%);
+   -webkit- transform: translateY(-50%);
+   border-top: 8px solid  black;
+   border-left: 8px solid transparent;
+   border-right: 8px solid transparent;
+  }
+ 
+  ul.third-level ~ a:before {
+     position: absolute; right: 15px; top: 50%;
+    content: "";
+   transform: translateY(-50%);
+   -webkit- transform: translateY(-50%);
+  
+   border-top: 7px solid  transparent;
+   border-left: 7px solid black;
+   border-bottom: 7px solid transparent;
+   
+  }
+   #thaiMenu .inner-menu ul.first-level > li >ul.second-level{
+     display: none;
+     z-index: 1;
+     position: absolute; top: 100%; left: 50%; 
+     transform: translateX(-50%);
+     -webkit-transform: translateX(-50%);
+     background: gray;
+     box-sizing: border-box;
+     min-width: 150px;
+     padding: 10px 0px;
+       
+   }
+  #thaiMenu .inner-menu ul.first-level > li:first-child >ul.second-level {
+    left: 0%; 
+     transform: translateX(0%);
+     -webkit-transform: translateX(0%);
+  }
+  #thaiMenu .inner-menu ul.first-level>li:last-child>ul.second-level {
+     right: 0%; 
+     transform: translateX(-50%);
+     -webkit-transform: translateX(-50%);
+  }
+ /* #thaiMenu .inner-menu ul.first-level > li:hover >ul.second-level{
+    display: block;
+    
+  }*/
+   #thaiMenu .inner-menu ul.first-level > li >ul.second-level>li>a,#thaiMenu .inner-menu ul.first-level > li >ul.second-level .third-level>li>a {
+    padding: 10px 10px; 
+     text-align: left;
+     box-sizing: border-box;
+     display: inline-block;
+     float: left;
+     color: #fff;
+     transition: color 0.5s;
+     -webkit-transition: color 0.5s;
+   }
+  #thaiMenu .inner-menu ul.first-level > li >ul.second-level>li>a:hover,#thaiMenu .inner-menu ul.first-level > li >ul.second-level .third-level>li>a:hover {
+    color: aquamarine;
+  }
+ #thaiMenu .inner-menu ul.first-level > li >ul.second-level>li {
+     position: relative;
+   float: left;
+   display: block;
+   width: 100%; 
+   }
+ #thaiMenu .inner-menu ul.first-level > li >ul.second-level>li>.third-level {
+   display: none;
+   position: absolute; top: 0%; left: 100%;
+    
+     background: gray;
+     box-sizing: border-box;
+     padding: 10px;
+     min-width: 110%;
+ } 
+   
+  /* #thaiMenu .inner-menu ul.first-level > li >ul.second-level>li:hover .third-level{
+     display: block;
+   }*/
+  
+  
+ #thaiMenu.float-style ul.first-level {
+    width: 100%;
+  }
+  #thaiMenu.float-style >.inner-menu >ul.first-level>li {
+    float: left;
+  }
+   #thaiMenu.float-style>.inner-menu>ul.first-level>li>a {
+     display: block;
+     box-sizing: border-box;
+     
+     padding: 10px 25px ;
+     color: #333333;
+     font-size: 1.5em;
+   }
+  /* center style*/
+  #thaiMenu.center-style ul.first-level {
+    width: 100%;
+    text-align: center;
+    
+  }
+  #thaiMenu.center-style ul.first-level>li {
+    display: inline-block;
+    padding: 0px 10px
+    
+  }
+  #thaiMenu.center-style ul.first-level>li>a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #333333;
+  }
+  #thaiMenu.center-style ul.first-level>li:first-child>a {
+    padding-left: 0px;
+  }
+ 
+}
+@media all and (max-width: 480px) {
+  /*for select box*/
+  .wrapper-sb ~ .menu-control {
+    display: none !important;
+  }
+   .wrapper-sb ~ .inner-menu {
+    display: none !important;
+     
+  }
+  /*for multiple*/
+ ul.second-level ~ a{
+   position: relative;
+ }
+  ul.second-level.get-up ~ a:before, ul.third-level.get-up ~ a:before {
+   content: "";
+   position: absolute; right: 20px; top: 50%;
+   transform: translateY(-50%);
+   -webkit- transform: translateY(-50%);
+   border-top: 8px solid  black;
+   border-left: 8px solid transparent;
+   border-right: 8px solid transparent;
+  }
+  ul.second-level.get-down ~ a:before, ul.third-level.get-down ~ a:before {
+  
+   content: "";
+   position: absolute; right: 20px; top: 50%;
+   transform: translateY(-50%);
+   -webkit- transform: translateY(-50%);
+   border-bottom: 8px solid  black;
+   border-left: 8px solid transparent;
+   border-right: 8px solid transparent;
+  }
+ ul.third-level ~ a{
+   position: relative;
+ }
+ ul.second-level {
+   width: 100%;
+   display:none;
+ }
+  ul.second-level>li>a {
+    display: block;
+    width: 100%;
+
+    padding-left: 50px!important;;
+
+  }
+ ul.third-level {
+   display: none;
+ }
+   ul.third-level>li>a {
+     display: block;
+     width: 100%;
+     padding-left: 60px!important;
+   }
+
+  /*collapsed*/
+   #thaiMenu {
+   overflow: hidden;
+ }
+  #thaiMenu.collapsed {
+    width: 100%;
+    
+  }
+  #thaiMenu button.menu-control ,#thaiMenu  button.menu-close {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 15px 0px 15px 20px;
+    background: #212B41;
+    color: #fff;
+    font-size: 1em;
+   
+  }
+  #thaiMenu.collapsed .inner-menu {
+      width: 100%;
+      display: block;
+      
+    }
+  #thaiMenu.collapsed button.menu-close {
+    display: none;
+  }
+   #thaiMenu.collapsed .inner-menu {
+     display: none;
+   }
+   #thaiMenu.collapsed .inner-menu ul.first-level>li>a,#thaiMenu.canvas-off .inner-menu ul.first-level>li>a,ul.second-level>li>a, ul.third-level>li>a {
+     display: block;
+     padding: 10px 0px 10px 35px; 
+     background: #212B41;color: #fff;
+     font-size: 1em;
+     box-sizing: border-box;
+     border-top: 2px solid #192132;
+     
+   }
+  /*canvas-off*/
+  #thaiMenu.canvas-off button.menu-control {
+    position: relative; left: 0px;
+    transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+    float:right;
+  }
+  
+  #thaiMenu.canvas-off div.inner-menu {
+    width: 70% !important;
+    position: absolute; top: 0px; left: -70%;
+    width: 100%;
+     transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+  }
+   #thaiMenu.canvas-off div.inner-menu.appear {
+     left: 0%;
+   }
+   #thaiMenu.canvas-off button.menu-control.disappear {
+     left: 70%;
+   }
+  /*select-box*/
+  #thaiMenu.select-box select.select-menu {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: #212B41;
+    color: #fff;
+    border: none;
+    border: 1px solid gray;
+    margin: 0px auto;
+    text-indent: 10px;
+    font-size: 1.5em;
+    position: relative;
+    overflow: hidden;
+      -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 20px;
+  }
+   #thaiMenu.select-box select.select-menu option {
+     border: none;
+     width: 100%;
+   }
+   #thaiMenu.select-box select.select-menu option.first {
+     text-indent: 20px;
+   }
+   #thaiMenu.select-box select.select-menu option.second {
+     text-indent: 40px;
+   }
+   #thaiMenu.select-box select.select-menu option.third {
+     text-indent: 60px;
+   }
+  #thaiMenu.select-box  .wrapper-sb {
+   position: relative;
+   
+    width: 98%;
+    overflow: hidden;
+    margin: 0px auto;
+  }
+   #thaiMenu.select-box  .wrapper-sb:before {
+  
+   content: "";
+   position: absolute; right: 20px; top:50%;
+   transform: translateY(-50%);
+   z-index: 1;
+   border-top: 8px solid  #fff;
+   border-left: 8px solid transparent;
+   border-right: 8px solid transparent;
+  }
+  
+}
